@@ -43,9 +43,12 @@ if ingredients_list:
       session.sql(my_insert_stmt).collect()
       st.success('Your Smoothie is ordered!', icon="✅")
 
-smoothiefroot_response = requests.get("[https://my.smoothiefroot.com/api/fruit/watermelon](https://my.smoothiefroot.com/api/fruit/watermelon)")  
-# st.text(smoothiefroot_response.json())    
-sf_df=st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)  
+smoothiefroot_response = requests.get(
+    "https://my.smoothiefroot.com/api/fruit/watermelon"
+)
+
+df = pd.json_normalize(smoothiefroot_response.json())
+st.dataframe(df, use_container_width=True)
 
 
     
