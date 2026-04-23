@@ -2,9 +2,8 @@ name: sis-env
 channels:
   - defaults
 dependencies:
-  - python=3.9
+  - python=3.10
   - pip
   - pip:
       - streamlit
       - snowflake-snowpark-python
-      - pandas
