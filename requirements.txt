@@ -1,9 +1,2 @@
-name: sis-env
-channels:
-  - defaults
-dependencies:
-  - python=3.14
-  - pip
-  - pip:
-      - streamlit
-      - snowflake-snowpark-python
+snowflake-snowpark-python
+streamlit
